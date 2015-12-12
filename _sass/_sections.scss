@@ -1,0 +1,42 @@
+.hero {
+  position: relative;
+  min-height: 500px;
+  background: #444 url("/images/hero/auckland-sun.jpg") center no-repeat;
+  background-size: cover;
+  text-align: center;
+
+  &__content {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -40%);
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 50px;
+    text-shadow: 0 1px 2px rgba(20, 20, 20, 0.5);
+  }
+
+  p {
+    color: #fff;
+    font-size: 20px;
+  }
+}
+
+.section {
+  overflow: auto;
+  padding: 1rem;
+}
+
+.section__content {
+  max-width: 400px;
+}
+
+.section__content--right {
+  float: right;
+}
+
+.section__text {
+    color: $grey-color;
+}
