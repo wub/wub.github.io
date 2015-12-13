@@ -83,20 +83,11 @@
   overflow: auto;
   padding: 1rem;
 
+  &__text {
+      color: $grey-color;
+  }
+
   @include media-query($on-laptop) {
     padding: 1rem 0;
   }
-}
-
-.section__content {
-  max-width: 400px;
-  font-size: 1.25rem;
-}
-
-.section__content--right {
-  float: right;
-}
-
-.section__text {
-    color: $grey-color;
 }
