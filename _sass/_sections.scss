@@ -1,8 +1,10 @@
 .hero {
-  background: #ededed url("/images/patterns/symphony.png");
+  background: #ededed url("/images/hero/auckland-sun.jpg") center no-repeat;
+  background-size: cover;
   position: relative;
-  padding: 3rem 1rem;
-  border-bottom: 1px solid #ddd;
+  padding: 4rem 1rem;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(20,20,20, 0.8);
 
   &__content {
     max-width: $content-width;
@@ -28,13 +30,14 @@
 
   &__lead {
     font-size: 1.25rem;
-    color: #444;
+    color: #eee;
+    text-shadow: none;
   }
 }
 
 // Email capture bar
 .capture {
-  background: #adadad;
+  background: #111;
   border-bottom: 1px solid #ddd;
   padding: 1rem;
 
