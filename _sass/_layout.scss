@@ -1,1 +1,26 @@
+.nav {
+  height: 56px;
+  background: #ededed;
+  overflow: auto;
+}
 
+.nav__inner {
+  max-width: $content-width;
+  margin: 0 auto;
+}
+
+.nav__menu {
+  float: right;
+}
+
+.nav__menu__link {
+  font-family: $header-font-family;
+  font-size: 18px;
+  color: #333;
+  padding: 0 0.5rem;
+  line-height: 56px;
+
+  &:hover {
+    color: #444;
+  }
+}

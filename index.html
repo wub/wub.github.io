@@ -17,35 +17,28 @@ layout: home
 
   <section class="hero">
     <div class="hero__content">
-      <div class="hero__content__inner">
+        <!-- <img class="hero__icon" src="/images/icons/book.png" width="96"> -->
+
         <h1 class="hero__title">
-          Live and Learn
-          <br>
-          <span style="font-size: 40px">in New Zealand</span>
+          Live&nbsp;and Learn
+
+          <div class="hero__subtitle">
+            in New Zealand
+          </div>
         </h1>
 
-        <p>Want to study in New Zealand? We can help.</p>
-      </div>
-
-      <!-- <input type="email" name="email" placeholder="Email address" style="border: 0; outline: none; padding: 0.5rem 1rem; font-size: 24px;"> -->
+        <p class="hero__lead">
+          We'll sort out everything you need to live, learn and work
+          in New Zealand &ndash; for free.
+        </p>
     </div>
   </section>
 
-  <div style="max-width: 960px; margin: 1rem auto;">
-    <section class="section">
-      <div class="section__content">
-        <h2 class="section__title">
-          Free, forever
-        </h2>
-        <p class="section__text">
-          We provide all of our services for free; we want things to be as smooth
-          as possible.
-        </p>
-      </div>
-    </section>
+  {% include capture.html %}
 
+  <div style="max-width: 1024px; margin: 1rem auto;">
     <section class="section section--right">
-      <div class="section__content section__content--right">
+      <div class="section__content">
         <h2 class="section__title">
           Simple applications
         </h2>
@@ -68,13 +61,25 @@ layout: home
     </section>
 
     <section class="section">
-      <div class="section__content section__content--right">
+      <div class="section__content">
         <h2 class="section__title">
           Employment help
         </h2>
         <p class="section__text">
           We'll help you find a full or part-time job, so by the time you've
           finished your studies you're already on your feet.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__content">
+        <h2 class="section__title">
+          Free, forever
+        </h2>
+        <p class="section__text">
+          We provide all of our services for free; we want things to be as smooth
+          as possible.
         </p>
       </div>
     </section>
@@ -92,7 +97,7 @@ layout: home
     </section>
 
     <section class="section">
-      <div class="section__content section__content--right">
+      <div class="section__content">
         <h2 class="section__title">
           Students like you
         </h2>
@@ -115,7 +120,7 @@ layout: home
     </section>
 
     <section class="section">
-      <div class="section__content section__content--right">
+      <div class="section__content">
         <h2 class="section__title">
           Local knowledge
         </h2>
@@ -126,5 +131,7 @@ layout: home
       </div>
     </section>
   </div>
+
+  {% include capture.html %}
 
 </main>

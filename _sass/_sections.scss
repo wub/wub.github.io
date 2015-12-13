@@ -1,43 +1,87 @@
 .hero {
-  min-height: 500px;
-  background: #444 url("/images/hero/auckland-sun.jpg") center no-repeat;
-  background-size: cover;
-  text-align: center;
+  background: #ededed url("/images/patterns/symphony.png");
   position: relative;
+  padding: 3rem 1rem;
+  border-bottom: 1px solid #ddd;
 
   &__content {
-    max-width: 960px;
+    max-width: $content-width;
     margin: 0 auto;
   }
 
-  &__content__inner {
-    position: absolute;
-    transform: translateY(-50%);
-    top: 50%;
+  &__icon {
+    margin-bottom: 1rem;
   }
 
   &__title {
-    color: #fff;
-    font-size: 58px;
-    text-shadow: 0 1px 4px rgba(20, 20, 20, 0.75);
-    text-align: left;
+    font-weight: 700;
+    font-size: 4rem;
     line-height: 1;
+    margin-bottom: 1rem;
   }
 
-  p {
-    color: #fff;
-    font-size: 20px;
-    text-shadow: 0 1px 4px rgba(20, 20, 20, 0.75);
+  &__subtitle {
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__lead {
+    font-size: 1.25rem;
+    color: #444;
+  }
+}
+
+// Email capture bar
+.capture {
+  background: #adadad;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem;
+
+  &__content {
+    max-width: $content-width;
+    margin: 0 auto;
+  }
+
+  &__input {
+    font-size: 1.5rem;
+    display: block;
+    margin: 0 auto;
+    border: 0;
+    padding: 1rem;
+    vertical-align: middle;
+    width: 100%;
+
+    @include media-query($on-tablet) {
+      margin: 0;
+      display: inline-block;
+    }
+  }
+
+  .btn {
+    display: block;
+    margin-top: 0.5rem;
+    text-align: center;
+    vertical-align: bottom;
+
+    @include media-query($on-tablet) {
+      display: inline-block;
+    }
   }
 }
 
 .section {
   overflow: auto;
   padding: 1rem;
+
+  @include media-query($on-laptop) {
+    padding: 1rem 0;
+  }
 }
 
 .section__content {
   max-width: 400px;
+  font-size: 1.25rem;
 }
 
 .section__content--right {
