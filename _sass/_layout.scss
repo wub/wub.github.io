@@ -1,6 +1,8 @@
 .nav {
-  height: 56px;
-  background: #ededed;
+  height: 70px;
+  padding: 0 1rem;
+  background: #eee;
+  border-bottom: 1px solid #ddd;
   overflow: auto;
 }
 
@@ -18,7 +20,7 @@
   font-size: 18px;
   color: #333;
   padding: 0 0.5rem;
-  line-height: 56px;
+  line-height: 70px;
 
   &:hover {
     color: #444;
