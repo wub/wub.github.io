@@ -54,6 +54,7 @@
 
     @include media-query($on-tablet) {
       margin: 0;
+      width: auto;
       display: inline-block;
     }
   }
