@@ -1,8 +1,11 @@
-.hero {
+.masthead {
   background: #ededed url("/images/hero/auckland-sun.jpg") center no-repeat;
   background-size: cover;
+}
+
+.hero {
   position: relative;
-  padding: 4rem 1rem;
+  padding: 5rem 1rem;
   color: #fff;
   text-shadow: 0 1px 3px rgba(20,20,20, 0.8);
 
@@ -47,13 +50,15 @@
   }
 
   &__input {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     display: block;
     margin: 0 auto;
     border: 0;
     padding: 1rem;
     vertical-align: top;
     width: 100%;
+    border-radius: 2px;
+    //background-image: url("/images/icons/mail.svg");
 
     @include media-query($on-tablet) {
       margin: 0;
@@ -67,6 +72,7 @@
     margin-top: 0.5rem;
     text-align: center;
     vertical-align: top;
+    font-size: 1.3rem;
 
     @include media-query($on-tablet) {
       display: inline-block;

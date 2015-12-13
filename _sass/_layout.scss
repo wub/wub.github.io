@@ -1,8 +1,7 @@
 .nav {
   height: 70px;
   padding: 0 1rem;
-  background: #eee;
-  border-bottom: 1px solid #ddd;
+  background: rgba(200, 200, 200, 0.8);
   overflow: auto;
 }
 
@@ -21,6 +20,7 @@
   color: #333;
   padding: 0 0.5rem;
   line-height: 70px;
+  font-weight: bold;
 
   &:hover {
     color: #444;
