@@ -1,18 +1,30 @@
 .masthead {
-  background: #ededed url("/images/hero/akaroa.jpg") center no-repeat;
+  background: #ededed url("/images/hero/queenstown.jpg") center 47% no-repeat;
   background-size: cover;
 }
 
 .hero {
   position: relative;
-  padding: 3rem 1rem;
+  padding: 3rem 1rem 1rem;
   color: #fff;
   text-shadow: 0 1px 3px rgba(20,20,20, 0.8);
   border-bottom: 10px solid #111;
 
+  @include media-query($on-tablet) {
+    padding-bottom: 3rem;
+  }
+
+  @include media-query($on-laptop) {
+    padding: 5rem 1rem 6rem 1rem;
+  }
+
   &__content {
     max-width: $content-width;
     margin: 0 auto;
+
+    @include media-query($on-tablet) {
+      padding: 0 1rem;
+    }
   }
 
   &__icon {
@@ -36,14 +48,21 @@
   &__lead {
     font-size: 1.25rem;
     color: #eee;
+    margin-bottom: 2rem;
+
+    @include media-query($on-tablet) {
+      margin-bottom: 1rem;
+    }
   }
 }
 
 // Email capture bar
 .capture {
-  //background: #111;
-  //border-bottom: 1px solid #ddd;
-  //padding: 1rem;
+  &--standalone {
+    background: #111;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem;
+  }
 
   &__content {
     max-width: $content-width;
@@ -67,6 +86,7 @@
       margin: 0;
       width: auto;
       display: inline-block;
+      text-align: left;
     }
   }
 

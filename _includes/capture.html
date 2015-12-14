@@ -1,7 +1,13 @@
 <section class="capture">
   <h2 class="screenreader">Sign up for free</h2>
   <form method="post" class="capture__content">
-      <input class="capture__input" type="email" name="email" placeholder="Email address" x-autocompletetype="email" {{include.autofocus}}>
+      <input class="capture__input"
+             type="email"
+             name="email"
+             placeholder="Email address"
+             x-autocompletetype="email"
+             required
+             {{include.autofocus}}>
       <input type="submit" class="btn" value="Sign up now">
   </form>
 </section>
