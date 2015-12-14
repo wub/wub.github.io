@@ -8,6 +8,7 @@
   padding: 3rem 1rem;
   color: #fff;
   text-shadow: 0 1px 3px rgba(20,20,20, 0.8);
+  border-bottom: 10px solid #111;
 
   &__content {
     max-width: $content-width;
@@ -40,9 +41,9 @@
 
 // Email capture bar
 .capture {
-  background: #111;
-  border-bottom: 1px solid #ddd;
-  padding: 1rem;
+  //background: #111;
+  //border-bottom: 1px solid #ddd;
+  //padding: 1rem;
 
   &__content {
     max-width: $content-width;
@@ -77,12 +78,13 @@
     font-size: 1.3rem;
     text-transform: lowercase;
     width: 100%;
-    padding: 0;
+    padding: 0 1rem;
     line-height: 50px;
 
     @include media-query($on-tablet) {
       display: inline-block;
       margin-top: 0;
+      width: auto;
     }
   }
 }
