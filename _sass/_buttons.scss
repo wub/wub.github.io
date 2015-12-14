@@ -8,6 +8,9 @@ $button-background: #e93a58;
     font-size: 1.3rem;
     border-radius: 2px;
     cursor: pointer;
+    -webkit-display: none;
+    outline: none;
+    border: none;
 
     &:hover {
       background: lighten($button-background, 10%);
