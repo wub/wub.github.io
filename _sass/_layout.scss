@@ -30,3 +30,22 @@
     color: #444;
   }
 }
+
+.info {
+  border-bottom: 1px solid #588F27;
+  padding: 1.3rem 1.2rem 1rem;
+  background: #A9CF54;
+  color: rgba(20, 20, 20, 0.8);
+  margin-bottom: 1rem;
+  vertical-align: middle;
+
+  img {
+    vertical-align: middle;
+    margin-right: 0.6rem;
+    margin-top: -3px;
+  }
+
+  @include media-query($on-tablet) {
+    border-radius: 3px 3px 0 0;
+  }
+}
