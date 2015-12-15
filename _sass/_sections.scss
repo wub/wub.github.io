@@ -58,10 +58,9 @@
 
 // Email capture bar
 .capture {
-  &--standalone {
-    background: #111;
-    border-bottom: 1px solid #ddd;
-    padding: 1rem;
+  &--footer {
+    background: #ddd;
+    padding: 2rem;
   }
 
   &__content {
