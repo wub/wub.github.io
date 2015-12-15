@@ -19,12 +19,12 @@ layout: home
     <section class="hero">
       <div class="hero__content">
           <h1 class="hero__title">
-            Want to study in New Zealand?
+            Want to study in New&nbsp;Zealand?
           </h1>
 
           <p class="hero__lead">
             We'll help you with everything you need to live, learn and work
-            in New Zealand.
+            in&nbsp;New&nbsp;Zealand.
           </p>
 
           <section class="capture">
@@ -198,7 +198,7 @@ layout: home
       </label>
     </div>
 
-    <div class="btn--next">
+    <div class="btn--next" onclick="advanceWizard()">
       Next &rarr;
     </div>
   </div>
@@ -247,15 +247,14 @@ layout: home
   }
 
   function advanceWizard() {
-    document.getElementById("wizard-step--1").style.display = none;
-    document.getElementById("wizard-step--2").style.display = block;
+    document.getElementById("wizard-step--1").style.display = "none";
+    document.getElementById("wizard-step--2").style.display = "block";
   }
 
   function capture(target, label) {
     var emailInput = document.getElementById(target);
 
     emailInput.disabled = true;
-
     nanoajax.ajax({url: "http://188.166.222.27/users", method: "POST", body: "user[email]=" + emailInput.value }, function() {
       document.body.className += " modal-open";
     });
