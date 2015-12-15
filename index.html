@@ -34,17 +34,17 @@ layout: home
 
           <section class="capture">
             <h2 class="screenreader">Sign up now</h2>
-            <form method="post" class="capture__content" id="capture" onsubmit="return capture()">
+            <form method="post" class="capture__content" id="capture-hero" onsubmit="return capture('email-hero', 'Hero')">
                 <input class="capture__input"
                        type="email"
                        name="email"
-                       id="email"
+                       id="email-hero"
                        placeholder="Email address"
                        autocomplete="email"
                        mozactionhint="go"
                        required
                        autofocus>
-                <input type="submit" class="btn" value="Get started">
+                <input type="submit" class="btn" value="Sign up now">
             </form>
           </section>
       </div>
@@ -130,6 +130,22 @@ layout: home
       </section>
     </div>
   </div>
+
+  <section class="capture">
+    <h2 class="screenreader">Sign up now</h2>
+    <form method="post" class="capture__content" onsubmit="return capture('email-footer', 'Footer')">
+        <input class="capture__input"
+               type="email"
+               name="email"
+               id="email-footer"
+               placeholder="Email address"
+               autocomplete="email"
+               mozactionhint="go"
+               required
+               autofocus>
+        <input type="submit" class="btn" value="Sign up now">
+    </form>
+  </section>
 </main>
 
 <footer style="background: #2C3E50; text-transform: lowercase">
@@ -159,11 +175,10 @@ layout: home
   ga('create', 'UA-71350362-1', 'auto');
   ga('send', 'pageview');
 
-  function capture() {
-    var captureForm = document.getElementById("capture");
-    var emailInput = document.getElementById("email");
+  function capture(target, label) {
+    var emailInput = document.getElementById(target);
     nanoajax.ajax({url: "http://188.166.222.27/users", method: "POST", body: "user[email]=" + emailInput.value }, function() {
-      ga('send', 'event', 'user', 'email-submitted', 'top-form');
+      ga('send', 'event', 'user', 'email-submitted', label);
     });
     return false;
   }
