@@ -4,7 +4,7 @@ layout: home
 
 <!--
   Make logo modifications
-  Touch up footer
+  x Touch up footer
   x Second call to action button above footer
   Modal for checkboxes to 'tailor' a students experience
   Login page with 'Sign up' link
@@ -12,6 +12,11 @@ layout: home
   header or one of the value header links Link value headers Create thank
   you page or thank you modal when someone signs up to say that we will be
   in touch shortly.
+
+  Sign up modal
+  =============
+  
+
 -->
 <main style="margin: 0 auto; background: #ECF0F1;">
 
@@ -22,21 +27,16 @@ layout: home
           <img alt="New Zealand Study" src="/images/nzs.png" width="180" style="margin-top: 15px;">
         </a>
 
-        <!--<div class="nav__menu">
-          <a class="nav__menu__link" href="#">Sign up</a>
-          <a class="nav__menu__link" href="#">Log in</a>
-        </div>-->
+        <div class="nav__menu">
+          <a class="nav__menu__link" href="#" id="login" onclick="return login()">Log in</a>
+        </div>
       </div>
     </nav>
 
     <section class="hero">
       <div class="hero__content">
           <h1 class="hero__title">
-            Live&nbsp;and Learn
-
-            <span class="hero__subtitle">
-              in New Zealand
-            </span>
+            Want to study in New Zealand?
           </h1>
 
           <p class="hero__lead">
@@ -64,10 +64,9 @@ layout: home
   </div>
 
   <section style="max-width: 960px; margin: 0 auto; padding: 2.5rem 1rem 3rem 1rem; border-bottom: 1px solid #ccc;">
-    <h2 style="text-align: center;">Thinking about studying in&nbsp;New&nbsp;Zealand?</h2>
     <p style="text-align: center; max-width: 666px; margin: 0 auto;">
       We're an online agency that makes the process of coming to
-      New Zealand easier. We'll help you every step of the way,
+      New Zealand easier. We'll help you every step of the way;
       from getting your visa, to finding a job &ndash; for free.
     </p>
   </section>
@@ -203,6 +202,10 @@ layout: home
       ga('send', 'event', 'user', 'email-submitted', label);
     });
     return false;
+  }
+
+  function login() {
+    ga('send', 'event', 'user', 'login-clicked');
   }
 
   !function(e,t){function n(e){return e&&t.XDomainRequest&&!/MSIE 1/.test(navigator.userAgent)?new XDomainRequest:t.XMLHttpRequest?new XMLHttpRequest:void 0}function o(e,t,n){e[t]=e[t]||n}var r=["responseType","withCredentials","timeout","onprogress"];e.ajax=function(e,t){function u(e,n){return function(){d||t(c.status||e,c.response||c.responseText||n,c),d=!0}}var a=e.headers||{},s=e.body,i=e.method||(s?"POST":"GET"),d=!1,c=n(e.cors);c.open(i,e.url,!0);var l=c.onload=u(200);c.onreadystatechange=function(){4===c.readyState&&l()},c.onerror=u(null,"Error"),c.ontimeout=u(null,"Timeout"),c.onabort=u(null,"Abort"),s&&(o(a,"X-Requested-With","XMLHttpRequest"),o(a,"Content-Type","application/x-www-form-urlencoded"));for(var p,f=0,v=r.length;v>f;f++)p=r[f],void 0!==e[p]&&(c[p]=e[p]);for(var p in a)c.setRequestHeader(p,a[p]);return c.send(s),c},t.nanoajax=e}({},function(){return this}());

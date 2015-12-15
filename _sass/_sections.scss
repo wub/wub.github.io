@@ -33,9 +33,13 @@
 
   &__title {
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 1;
     margin-bottom: 1rem;
+
+    @include media-query($on-tablet) {
+      font-size: 3rem;
+    }
   }
 
   &__subtitle {
