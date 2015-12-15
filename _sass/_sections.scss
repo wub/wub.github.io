@@ -6,7 +6,7 @@
 
 .hero {
   position: relative;
-  padding: 3rem 1rem 1rem;
+  padding: 3rem 1.5rem 2rem;
   color: #fff;
   text-shadow: 0 1px 3px rgba(20,20,20, 0.8);
 
@@ -126,10 +126,12 @@
   overflow: auto;
   padding: 1.5rem 1rem;
   width: 100%;
+  text-align: center;
 
   @include media-query($on-tablet) {
     width: 50%;
     float: left;
+    text-align: left;
   }
 
   &__title {
