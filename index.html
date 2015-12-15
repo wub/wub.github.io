@@ -169,7 +169,7 @@ layout: home
       </a>
     </div>
     <div style="float: right; padding-bottom: 1rem;">
-      <img src="/images/agent.png" alt="New Zealand Education Trained Agent" style="text-align: right;" width="128">
+      <img data-src="//nzs.imgix.net/agent.png" class="imgix-lazy" alt="New Zealand Education Trained Agent" style="text-align: right;" width="128">
     </div>
   </div>
 </footer>
@@ -185,7 +185,7 @@ layout: home
       lazyLoad: true,
       lazyLoadOffsetVertical: 200,
       onChangeParamOverride: function(w, h) {
-        return { "dpr": null, "w": null, "q": null, "ixjsv": null };
+        return { "dpr": null, "w": null, "q": null };
       }
     });
   });
