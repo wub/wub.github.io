@@ -61,6 +61,7 @@
   &--footer {
     background: #ddd;
     padding: 2rem;
+    text-align: center;
   }
 
   &__content {
@@ -79,7 +80,7 @@
     width: 100%;
     border-radius: 2px;
     text-transform: lowercase;
-    height: 50px;
+    height: 49px;
     background: rgba(255, 255, 255, 0.9);
 
     @include media-query($on-tablet) {
@@ -99,7 +100,8 @@
     text-transform: lowercase;
     width: 100%;
     padding: 0 1rem;
-    line-height: 50px;
+    line-height: 49px;
+    height: 49px;
     background: #E74C3C;
 
     @include media-query($on-tablet) {
