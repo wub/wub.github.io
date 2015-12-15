@@ -142,6 +142,10 @@
     letter-spacing: 2px;
   }
 
+  &__icon {
+    margin-right: 5px;
+  }
+
   &__text {
       color: $grey-color;
       max-width: 400px;
