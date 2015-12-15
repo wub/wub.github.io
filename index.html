@@ -142,7 +142,7 @@ layout: home
     var captureForm = document.getElementById("capture");
     var emailInput = document.getElementById("email");
     nanoajax.ajax({url: "http://188.166.222.27/users", method: "POST", body: "user[email]=" + emailInput.value }, function() {
-      ga('set', 'metric1', 1);
+      ga('send', 'event', 'user', 'email-submitted', 'top-form');
     });
     return false;
   }
