@@ -41,11 +41,9 @@
   @include media-query($on-tablet) {
     max-width: 600px;
     top: 3rem;
-    left: 50%;
-    right: auto;
     bottom: auto;
     border-radius: 3px;
-    transform: translateX(-50%);
+    margin: 0 auto;
   }
 }
 

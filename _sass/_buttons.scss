@@ -26,4 +26,12 @@ $button-background: #e93a58;
         background: rgba(20,20,20, 0.4);
       }
     }
+
+    &--next {
+      padding: 1rem;
+      font-size: 1.5rem;
+      background: #3498DB;
+      text-align: center;
+      color: #fff;
+    }
 }
