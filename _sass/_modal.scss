@@ -1,0 +1,72 @@
+.modal-open {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.modal-overlay {
+  display: none;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(20,20,20, 0.7);
+
+  .modal-open & {
+    display: block;
+  }
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  background: #ddd;
+  z-index: 110;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+
+  &__header {
+    padding: 1rem;
+  }
+
+  .modal-open & {
+    display: block;
+  }
+
+  @include media-query($on-tablet) {
+    max-width: 600px;
+    top: 3rem;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    border-radius: 3px;
+    transform: translateX(-50%);
+  }
+}
+
+
+// Naughty - move to its own file you moron
+.service-select {
+  &__item {
+    width: 100%;
+    font-size: 1.2rem;
+    border-top: 1px solid #aaa;
+    padding: 1.2rem;
+    opacity: 0.9;
+    display: block;
+
+    &:last-child {
+      border-bottom: 1px solid #aaa;
+      border-radius: 0 0 3px 3px;
+    }
+
+    &--selected {
+      opacity: 1;
+    }
+  }
+}
