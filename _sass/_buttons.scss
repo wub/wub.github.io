@@ -33,5 +33,15 @@ $button-background: #e93a58;
       background: #3498DB;
       text-align: center;
       color: #fff;
+      cursor: pointer;
+      margin-top: 1rem;
+
+      &:hover {
+        background: lighten(#3498DB, 5%);
+      }
+
+      &:active {
+        background: darken(#3498DB, 5%);
+      }
     }
 }

@@ -157,109 +157,66 @@ layout: home
   </div>
 </footer>
 
-<!-- MODAL -->
+<!-- .modal[aria-hidden="false"] -->
 
-<div class="modal login-modal-container show" role="dialog" aria-hidden="false" aria-labelledby="login-modal-content" aria-describedby="login-modal-content" tabindex="-1">
+<div class="modal service-modal-container" id="service-modal" aria-hidden="true" role="dialog" aria-labelledby="service-modal-content" aria-describedby="service-modal-content" tabindex="-1">
   <div class="modal-table">
     <div class="modal-cell">
-      <div class="modal-content signup" id="login-modal-content">
-        <div class="alert alert-with-icon alert-error alert-header panel-header hidden-element notice" style="background: #0dd9bb;
+      <div class="modal-content signup" id="service-modal-content">
+        <div class="panel-header" style="background: #0dd9bb;
         color: rgba(20, 20, 20, 0.8);">
-          <img src="/images/icons/smiley-1.svg" width="36" alt="Smiley face" style="vertical-align: middle; margin-right: 0.6rem; margin-top: -3px;" />
-          <strong>Thanks!</strong> You're almost done.
+          <div id="modal-header-content">
+            <img src="/images/icons/smiley-1.svg" width="36" alt="Smiley face" style="vertical-align: middle; margin-right: 0.6rem; margin-top: -3px;" />
+            <strong>Thanks!</strong> You're almost done.
+          </div>
         </div>
 
         <div class="panel-padding panel-body">
-          <p>Let's get to know you a bit more &ndash; what do you need&nbsp;help&nbsp;with?</p>
+          <div id="wizard-step--1">
+            <p>Let's get to know you a bit more &ndash; what do you need&nbsp;help&nbsp;with?</p>
 
-          <div class="service-select">
-            <label for="service-1" class="service-select__item">
-              <input id="service-1" type="checkbox">
-              Getting a visa
-            </label>
-            <label for="service-2" class="service-select__item">
-              <input id="service-2" type="checkbox">
-              Finding an education provider
-            </label>
-            <label for="service-3" class="service-select__item">
-              <input id="service-3" type="checkbox">
-              Applying to schools
-            </label>
-            <label for="service-4" class="service-select__item">
-              <input id="service-4" type="checkbox">
-              Getting a job
-            </label>
-            <label for="service-5" class="service-select__item">
-              <input id="service-5" type="checkbox">
-              Finding other students from my country
-            </label>
-            <label for="service-6" class="service-select__item">
-              <input id="service-6" type="checkbox">
-              Learning about New Zealand
-            </label>
+            <div class="service-select">
+              <label for="service-1" class="service-select__item">
+                <input id="service-1" type="checkbox">
+                Getting a visa
+              </label>
+              <label for="service-2" class="service-select__item">
+                <input id="service-2" type="checkbox">
+                Finding an education provider
+              </label>
+              <label for="service-3" class="service-select__item">
+                <input id="service-3" type="checkbox">
+                Applying to schools
+              </label>
+              <label for="service-4" class="service-select__item">
+                <input id="service-4" type="checkbox">
+                Getting a job
+              </label>
+              <label for="service-5" class="service-select__item">
+                <input id="service-5" type="checkbox">
+                Finding other students from my country
+              </label>
+              <label for="service-6" class="service-select__item">
+                <input id="service-6" type="checkbox">
+                Learning about New Zealand
+              </label>
+            </div>
+
+            <div class="btn--next" onclick="advanceWizard()">
+              Next &rarr;
+            </div>
           </div>
-
-          <div class="btn--next" onclick="advanceWizard()">
-            Next &rarr;
+          <div id="wizard-step--2" style="display: none;">
+            <div class="modal__header" style="text-align: center;">
+              <img src="/images/icons/check.svg" width="48" alt="Tick" style="margin-bottom: 0.5rem;">
+              <h2>Thanks for signing up!</h2>
+              <p>One of our agents will be in touch with you shortly via email.</p>
+            </div>
           </div>
         </div>
     </div>
   </div>
 </div>
-
-<!--overlay-->
-<!-- <div class="modal-overlay">
-</div>
-
-<div class="modal">
-  <div id="wizard-step--1" style="">
-    <div class="info">
-      <img src="/images/icons/smiley-1.svg" width="36">
-      <strong>Thanks!</strong> You're almost done.
-    </div>
-    <div class="modal__header">
-      <p>Let's get to know you a bit more &ndash; what do you need&nbsp;help&nbsp;with?</p>
-    </div>
-
-    <div class="service-select">
-      <label for="service-1" class="service-select__item">
-        <input id="service-1" type="checkbox">
-        Getting a visa
-      </label>
-      <label for="service-2" class="service-select__item">
-        <input id="service-2" type="checkbox">
-        Finding an education provider
-      </label>
-      <label for="service-3" class="service-select__item">
-        <input id="service-3" type="checkbox">
-        Applying to schools
-      </label>
-      <label for="service-4" class="service-select__item">
-        <input id="service-4" type="checkbox">
-        Getting a job
-      </label>
-      <label for="service-5" class="service-select__item">
-        <input id="service-5" type="checkbox">
-        Finding other students from my country
-      </label>
-      <label for="service-6" class="service-select__item">
-        <input id="service-6" type="checkbox">
-        Learning about New Zealand
-      </label>
-    </div>
-
-    <div class="btn--next" onclick="advanceWizard()">
-      Next &rarr;
-    </div>
-  </div>
-  <div id="wizard-step--2" style="display:none">
-    <div class="modal__header" style="text-align: center;">
-      <img src="/images/icons/check.svg" width="48" alt="Tick" style="margin-bottom: 0.5rem;">
-      <h2>Thanks for signing up!</h2>
-      <p>One of our agents will be in touch with you shortly via email.</p>
-    </div>
-  </div>
-</div> -->
 
 <script>
   /* imgix 2.1.0 */
@@ -300,6 +257,7 @@ layout: home
   function advanceWizard() {
     document.getElementById("wizard-step--1").style.display = "none";
     document.getElementById("wizard-step--2").style.display = "block";
+    document.getElementById("modal-header-content").style.display = "none";
   }
 
   function capture(target, label) {
@@ -307,7 +265,7 @@ layout: home
 
     emailInput.disabled = true;
     nanoajax.ajax({url: "http://188.166.222.27/users", method: "POST", body: "user[email]=" + emailInput.value }, function() {
-      document.body.className += " modal-open";
+      document.getElementById("service-modal").setAttribute("aria-hidden", "false");
     });
 
     ga('send', 'event', 'Emails', 'Submitted', label);
